@@ -6,13 +6,13 @@ def printf(format, *args):
 
 
 # This is an example of print f formating 
-fuck = "this is terrible"
-shit = "this is shit"
-check = " i hate this place ahhhhhh"
+fzz = "this is f"
+szz = "this is s"
+check = " this is c"
 
-bastard = "fuck %-40s cunt %-60s %-40s" % (fuck,shit,check)
+b= "fzz %-40s czz %-60s %-40s" % (fzz,szz,check)
 
-print bastard
+print b
 
 file_name = "chris"
 txt = open(file_name)
