@@ -3,7 +3,7 @@ import sys
 import os
 import pdb
 
-chris = "fuck shit piss"
+chris = "fzzz szzz pzzzz"
 x = "fu"
 cmd = ""
 test = sys.argv[1]
