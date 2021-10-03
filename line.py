@@ -3,7 +3,9 @@ import sys
 import os
 import pdb
 
-chris = "fuck shit piss"
+### Usage xxx.py 
+
+chris = "fzzz szzzz pzzzz"
 x = "fu"
 cmd = ""
 buf = []
