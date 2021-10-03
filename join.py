@@ -3,6 +3,8 @@ import sys
 import os
 import pdb
 
+### use xxx.py <subfile> <superfile>
+
 chris = "faaa saaaa paaaaa"
 x = "fu"
 cmd = ""
