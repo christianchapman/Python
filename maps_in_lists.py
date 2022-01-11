@@ -42,3 +42,4 @@ for k in a_dict.values() :
 
 # To get a specific value
 
+print ("This is the value %-20s" % (a_dict["color"]))
