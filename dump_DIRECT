@@ -1,0 +1,63 @@
+cat chris.txt | sed -e 's/\[\]//g' | sed -e "s/\['//g" | sed -e "s/'\]//g" | sort | uniq
+
+#!/usr/bin/python
+
+#Read in pac file and output the entries that are part of direct 
+
+import sys
+import re
+
+n = 100
+filename = sys.argv[1]
+fileout = sys.argv[2]
+fp = open(filename)
+fo = open(fileout,'w')
+
+build_list = fp.readlines()
+new_build = []
+final_list = []
+ultimate_list = []
+
+for item in build_list :
+     ######## Look for an IF that isnt IP related
+    if "if" in item :
+        new_build.append("if")
+        ma = re.findall(r'"([^"]*)"', item)
+        new_build.append(ma)
+    if "return" in item:
+        new_build.append(item)
+    else:
+      ma = re.findall(r'"([^"]*)"', item)
+      for shit in ma:
+           new_build.append(shit)
+
+print (new_build)
+
+for i in new_build :
+    i = str(i)
+    if "if" in i  and ("IsInNet" not in i) :
+        final_list = []
+        print ("we found the if\n")
+    print ("the element in new_build is %s\n" %(i))
+    if "return" in i and "DIRECT" in i :
+        print (" we found the DIRECT %s\n" %(i))
+        ultimate_list = final_list.copy()
+        for h in ultimate_list :
+            fo.write("%s\n" %h)
+        final_list =[]
+        ultimate_list = []
+    if "return" in i and "PROXY" in i :
+        print (" we found a PROXY statemnet clean the lists %s\n" %(i))
+        final_list =[]
+        ultimate_list = []
+        continue
+        
+    if "if" not  in i :
+         print ("we have added %s to final_list" %(i))
+         final_list.append(i)
+
+print (" ultimat list is %s" %(ultimate_list))
+for j in ultimate_list :
+    print ("%s\n" %(j)) 
+
+fo.close()
