@@ -16,3 +16,16 @@ traceroute to 119.42.136.52 (119.42.136.52), 30 hops max, 60 byte packets
 14  * * *
 15  * * *
 16  * * *
+
+
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '59.43.0.0 - 59.43.255.255'
+
+% Abuse contact for '59.43.0.0 - 59.43.255.255' is 'email@chinatelecom.cn'
+
+inetnum:        59.43.0.0 - 59.43.255.255
+netname:        CN2-BB
+descr:          Chinatelecom Next Carrying Network backbone
+descr:          China Telecom
